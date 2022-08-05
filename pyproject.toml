@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medusa"
+description = "My package description"
+readme = "README.rst"
+requires-python = ">=3.7"
+keywords = ["one", "two"]
+license = {text = "BSD 3-Clause License"}
+classifiers = [ ]
+dependencies = [
+    "requests",
+    'importlib-metadata; python_version<"3.8"',
+]
+dynamic = ["version"]
+
+[project.scripts]
+my-script = "medusa:main"
+
+[tool.pylint.messages_control]
+disable = [
+    "arguments-differ",
+    "attribute-defined-outside-init",
+    "blacklisted-name",
+    "duplicate-code",
+    "fixme",
+    "import-error",
+    "no-member",
+    "no-name-in-module",
+    "protected-access",
+    "stop-iteration-return",
+    "too-few-public-methods",
+    "too-many-arguments",
+    "too-many-branches",
+    "too-many-instance-attributes",
+    "too-many-lines",
+    "too-many-locals",
+    "too-many-return-statements",
+    "too-many-statements",
+    "abstract-method",
+    "chained-comparison",
+    "eval-used",
+    "exec-used",
+    "expression-not-assigned",
+    "global-statement",
+    "missing-docstring",
+    "redefined-argument-from-local",
+    "redefined-outer-name",
+    "reimported",
+    "too-many-ancestors",
+    "unexpected-special-method-signature",
+]

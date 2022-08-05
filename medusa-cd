@@ -1,0 +1,10 @@
+path_to_executable=$(which medusa)
+if [ -x "$path_to_executable" ] ; then
+    function cd() {
+        builtin cd "$@"
+        eval "$(medusa)"
+    }
+else
+    echo "cannot find medusa executable"
+    echo "make sure that the binary is in your path"
+fi
