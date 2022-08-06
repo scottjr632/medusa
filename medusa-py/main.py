@@ -44,7 +44,7 @@ def format_log_msg(ppid: int, msg: str) -> str:
 def log_to_file(msg: str) -> None:
     if os.environ.get(MEDUSA_DEBUG_KEY) in ("", None):
         return
-    
+
     if not os.path.exists(CACHE_DIR):
         os.makedirs(CACHE_DIR)
 
